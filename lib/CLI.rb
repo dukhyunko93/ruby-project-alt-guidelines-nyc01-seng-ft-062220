@@ -59,7 +59,7 @@ def log_in
             pw = gets.chomp
             user_authorization(id, pw)
         end
-    elsif '2'
+    elsif response == '2'
         create_user
     else
         puts "---------------------------------"
