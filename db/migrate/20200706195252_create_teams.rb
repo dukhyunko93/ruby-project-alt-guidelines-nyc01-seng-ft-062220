@@ -1,0 +1,8 @@
+class CreateTeams < ActiveRecord::Migration[5.2]
+  def change
+    create_table :teams do |t|
+      t.string :team_name
+      t.boolean :fee_paid?, default: false
+    end
+  end
+end

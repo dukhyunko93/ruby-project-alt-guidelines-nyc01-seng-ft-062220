@@ -1,0 +1,85 @@
+League.delete_all
+Season.delete_all
+Team.delete_all
+Player.delete_all
+Record.delete_all
+
+u1 = User.create(first_name: "Duke", last_name: "Ko", user_id: "Duke_Ko", password: "Abc123!")
+
+l1 = League.create(name: "Time Out League", user: u1)
+l2 = League.create(name: "NBA", user: u1)
+
+s1 = Season.create(year: 2019, which_season: "Fall", league: l1)
+s2 = Season.create(year: 2018, which_season: "Spring", league: l2)
+
+t1 = Team.create(team_name: "Straw Hats", fee_paid?: true)
+t2 = Team.create(team_name: "NYC Hustler", fee_paid?: true)
+t3 = Team.create(team_name: "Ice In My Veins", fee_paid?: true)
+t4 = Team.create(team_name: "WE-R1")
+t5 = Team.create(team_name: "NY Knicks", fee_paid?: true)
+t6 = Team.create(team_name: "LA Lakers", fee_paid?: true)
+t7 = Team.create(team_name: "Chicago Bulls")
+t8 = Team.create(team_name: "Miami Heat")
+
+
+SeasonTeam.create(season: s1, team: t1)
+SeasonTeam.create(season: s1, team: t2)
+SeasonTeam.create(season: s1, team: t3)
+SeasonTeam.create(season: s1, team: t4)
+SeasonTeam.create(season: s2, team: t5)
+SeasonTeam.create(season: s2, team: t6)
+SeasonTeam.create(season: s2, team: t7)
+SeasonTeam.create(season: s2, team: t8)
+
+Player.create(first_name: "Jonah", last_name: "P", dob: "1992-01-23", jersey_number: 8, jersey_size: "L" , team: t1)
+Player.create(first_name: "Duke", last_name: "K", dob: "1993-06-21", jersey_number: 10, jersey_size: "M" , team: t1)
+Player.create(first_name: "David", last_name: "S", dob: "1993-08-12", jersey_number: 17, jersey_size: "L" , team: t1)
+Player.create(first_name: "Moses", last_name: "P", dob: "1996-04-23", jersey_number: 2, jersey_size: "L" , team: t1)
+Player.create(first_name: "Youngsoo", last_name: "S", dob: "1995-04-23", jersey_number: 5, jersey_size: "L" , team: t1)
+Player.create(first_name: "Steve", last_name: "S", dob: "199-103-21", jersey_number: 33, jersey_size: "L" , team: t2)
+Player.create(first_name: "Peter", last_name: "M", dob: "1992-05-22", jersey_number: 11, jersey_size: "M" , team: t2)
+Player.create(first_name: "Jack", last_name: "K", dob: "1991-11-21", jersey_number: 1, jersey_size: "L" , team: t2)
+Player.create(first_name: "Daniel", last_name: "K", dob: "1992-09-29", jersey_number: 7, jersey_size: "L" , team: t2)
+Player.create(first_name: "Josh", last_name: "Y", dob: "1992-05-05", jersey_number: 45, jersey_size: "L" , team: t2)
+Player.create(first_name: "Phillip", last_name: "C", dob: "1991-10-02", jersey_number: 24, jersey_size: "M" , team: t3)
+Player.create(first_name: "Josh", last_name: "A", dob: "1996-07-17", jersey_number: 10, jersey_size: "L" , team: t3)
+Player.create(first_name: "Antonio", last_name: "M", dob: "1992-12-01", jersey_number: 76, jersey_size: "XL" , team: t3)
+Player.create(first_name: "Kyle", last_name: "S", dob: "1994-06-03", jersey_number: 30, jersey_size: "L" , team: t3)
+Player.create(first_name: "Tony", last_name: "L", dob: "1990-08-05", jersey_number: 40, jersey_size: "L" , team: t3)
+Player.create(first_name: "Storm", last_name: "Y", dob: "1994-05-02", jersey_number: 11, jersey_size: "XXL" , team: t4)
+Player.create(first_name: "Arthur", last_name: "Y", dob: "1997-12-22", jersey_number: 16, jersey_size: "S" , team: t4)
+Player.create(first_name: "Calvin", last_name: "H", dob: "1995-04-11", jersey_number: 30, jersey_size: "L" , team: t4)
+Player.create(first_name: "Joseph", last_name: "P", dob: "1993-08-09", jersey_number: 6, jersey_size: "XL" , team: t4)
+Player.create(first_name: "Ben", last_name: "S", dob: "1990-11-06", jersey_number: 1, jersey_size: "S" , team: t4)
+Player.create(first_name: "Carmelo", last_name: "A", dob: "1987-12-02", jersey_number: 7, jersey_size: "XXL", team: t5)
+Player.create(first_name: "Amare", last_name: "S", dob: "1965-01-02", jersey_number: 1, jersey_size: "XXL", team: t5)
+Player.create(first_name: "Chauncey", last_name: "B", dob: "1972-08-22", jersey_number: 3, jersey_size: "L", team: t5)
+Player.create(first_name: "Patrick", last_name: "E", dob: "1924-02-14", jersey_number: 33, jersey_size: "XXL", team: t5)
+Player.create(first_name: "Jason", last_name: "K", dob: "1966-10-09", jersey_number: 5, jersey_size: "L", team: t5)
+Player.create(first_name: "Anthony", last_name: "D", dob: "1993-10-01", jersey_number: 3, jersey_size: "XXL", team: t6)
+Player.create(first_name: "Lebron", last_name: "J", dob: "1987-12-02", jersey_number: 23, jersey_size: "XL", team: t6)
+Player.create(first_name: "Kobe", last_name: "B", dob: "1985-07-07", jersey_number: 24, jersey_size: "L", team: t6)
+Player.create(first_name: "Kyle", last_name: "K", dob: "1996-04-09", jersey_number: 10, jersey_size: "XL", team: t6)
+Player.create(first_name: "Danny", last_name: "G", dob: "1989-11-05", jersey_number: 40, jersey_size: "L", team: t6)
+Player.create(first_name: "Derrick", last_name: "R", dob: "1988-03-21", jersey_number: 1, jersey_size: "L", team: t7)
+Player.create(first_name: "Michael", last_name: "J", dob: "1966-06-23", jersey_number: 23, jersey_size: "L", team: t7)
+Player.create(first_name: "Zach", last_name: "L", dob: "1992-08-30", jersey_number: 5, jersey_size: "L", team: t7)
+Player.create(first_name: "Jimmy", last_name: "B", dob: "1990-09-28", jersey_number: 24, jersey_size: "XL", team: t7)
+Player.create(first_name: "Joakim", last_name: "N", dob: "1985-04-19", jersey_number: 50, jersey_size: "XXL", team: t7)
+Player.create(first_name: "Dwayne", last_name: "W", dob: "1984-03-29", jersey_number: 3, jersey_size: "L", team: t8)
+Player.create(first_name: "Shaq", last_name: "O", dob: "1975-09-27", jersey_number: 77, jersey_size: "XXXL", team: t8)
+Player.create(first_name: "Tyler", last_name: "H", dob: "1997-12-25", jersey_number: 14, jersey_size: "L", team: t8)
+Player.create(first_name: "Bam", last_name: "B", dob: "1991-02-27", jersey_number: 1, jersey_size: "XL", team: t8)
+Player.create(first_name: "Udonis", last_name: "H", dob: "1979-03-22", jersey_number: 50, jersey_size: "XXL", team: t8)
+
+
+
+
+Record.create(team: t1, win_total: 3, loss_total: 0, plus_mins_total: 23)
+Record.create(team: t2, win_total: 1, loss_total: 2, plus_mins_total: -12)
+Record.create(team: t3, win_total: 1, loss_total: 2, plus_mins_total: 3)
+Record.create(team: t4, win_total: 1, loss_total: 2, plus_mins_total: -5)
+Record.create(team: t5, win_total: 3, loss_total: 0, plus_mins_total: 55)
+Record.create(team: t6, win_total: 1, loss_total: 2, plus_mins_total: -22)
+Record.create(team: t7, win_total: 1, loss_total: 2, plus_mins_total: 33)
+Record.create(team: t8, win_total: 1, loss_total: 2, plus_mins_total: -5)
